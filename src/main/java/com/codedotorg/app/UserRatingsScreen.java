@@ -85,5 +85,10 @@ public class UserRatingsScreen extends AppScreen {
 
         return listView;
     }
+    ArrayList<Rating> ratings = new ArrayList<Rating>();
+
+   //public void addRating(Rating rating) {
+    //    ratings.add(rating);
+    //}
 
 }
