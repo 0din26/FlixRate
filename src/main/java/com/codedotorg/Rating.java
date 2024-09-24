@@ -22,7 +22,7 @@ public class Rating {
         this.user = user;
         this.movie = movie;
         this.score = score;
-        UserRatingsScreen.addRating(this);
+        //UserRatingsScreen.addRating(this);
     }
 
     /**

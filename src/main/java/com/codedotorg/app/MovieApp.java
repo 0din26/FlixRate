@@ -49,7 +49,8 @@ public class MovieApp extends AppScreen {
 
         users = new ArrayList<User>();
         movies = MovieDatabase.createMovieList();
-        currentUser = null;
+        String str = currentUser.getName();
+        currentUser = new User(str); // Initialize with a default user
 
         welcomeScreen = new WelcomeScreen(window, width, height);
         mainScreen = new MainScreen(window, width, height);
@@ -57,6 +58,7 @@ public class MovieApp extends AppScreen {
         rateMovieScreen = new RateMovieScreen(window, width, height);
         viewUsersScreen = new ViewUsersScreen(window, width, height);
         userRatingsScreen = new UserRatingsScreen(window, width, height);
+        userRatingsScreen.setUser(currentUser);
     }
 
     /**

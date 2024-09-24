@@ -14,6 +14,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import com.codedotorg.User;
+
 
 public class UserRatingsScreen extends AppScreen {
 
@@ -26,10 +28,17 @@ public class UserRatingsScreen extends AppScreen {
      * @param width The width of the user ratings screen.
      * @param height The height of the user ratings screen.
      */
+    private User user;
+
     public UserRatingsScreen(Stage window, int width, int height) {
         super(window, width, height);
+        //setUser(currentUser);
     }
 
+    public void setUser(User user)
+    {
+        this.user = user;
+    }
     /**
      * Displays the user ratings screen by creating a VBox layout and setting it as the scene.
      */
@@ -61,7 +70,7 @@ public class UserRatingsScreen extends AppScreen {
      * @return a list of UI components for the user ratings screen
      */
     public List<Node> createComponents() {
-        Label userLabel = new Label();
+        Label userLabel = new Label(user.getName() +"'s Movies");
         ListView<Rating> listView = createListView();
         Button backButton = getBackButton();
 
